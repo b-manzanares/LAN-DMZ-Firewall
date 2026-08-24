@@ -1,26 +1,35 @@
-# LAN-DMZ-Firewall
+🛡️ LAN-DMZ-Firewall: Enterprise Network Implementation <br>
 
-##Objective - The goal was to implement a firewall policy, static routing, and interface setup for a Fortinet firewall. This provided connectivity to a LAN, DMZ, and internet. Allowing connectivity from LAN to internet, and return only if a connection was established.
+🎯 Objective
 
-* Set up a Fortinet firewall to connect to internet translating IP's from Private to Public via Port Address Translation (PAT).
-* Incorporated VLAN's for segmentation, secure shell for secure remote access, and Access-lists for security.   
-* Created DHCP for devices to receive IP addresses automatically.
-* Verified and tested network resilience and resource availability.
+Designed and deployed a comprehensive network architecture centered around a Fortinet FortiGate firewall, establishing secure routing, segmentation, and controlled access across LAN, DMZ, and WAN (Internet) zones. The primary security posture enforces stateful inspection, permitting outbound traffic from the internal network while strictly allowing return traffic only for established, authorized sessions.
+🛠️ Key Implementation Steps
+<ul>
+<li>Perimeter Security & NAT: Configured WAN connectivity translating private internal IP addresses to public IPs using Port Address Translation (PAT).</li>
 
-## 📖 Skills Learned
+<li>Network Segmentation: Implemented VLANs to isolate network zones and applied Access Control Lists (ACLs) to enforce security boundaries.</li>
 
-* Fortinet polices & routing.
-* Hot standy redundancy protocol load balancing between VLANs.
-* Use of Wireshark for DCHP troubleshooting.
-* OSPF routing, for route updates when a link goes down. 
-* Single-home WAN setup.
-* Network troubleshooting.
+<li>Remote Management & Automation: Enabled SSH for secure administrative CLI access and set up DHCP servers for automated dynamic IP allocation to endpoint devices.</li>
 
-## 🛠️ Tools & Technologies Used
+<li>Resilience & Testing: Verified and tested network resilience, route failover, and resource availability across all interfaces.</li> 
+</ul>
+📖 Skills & Competencies Learned
 
-* Verification commands
-* ACL's
-* Fortinet CLI for basic setup
+    Fortinet Security Fabric: Advanced policy creation, interface configuration, and static routing.
+
+    Redundancy Protocols: Configured hot-standby redundancy and gateway load balancing across VLANs.
+
+    Dynamic Routing: Implemented OSPF (Open Shortest Path First) to ensure automatic route convergence and failover when links go down.
+
+    Network Troubleshooting & Analysis: Utilized Wireshark for packet capture and DHCP troubleshooting, alongside systematic CLI verification commands.
+
+    WAN Topologies: Configured and validated single-homed WAN connections.
+
+🧰 Tools & Technologies Used
+
+    Hardware / Platforms: Fortinet FortiGate Firewall, FortiOS CLI.
+
+    Protocols & Services: OSPF, DHCP, SSH, PAT/NAT, VLANs, ACLs.
 
 ## 🗺️ Topology Diagram
 
