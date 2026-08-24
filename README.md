@@ -2,7 +2,8 @@
 
 🎯 Objective
 
-Designed and deployed a comprehensive network architecture centered around a Fortinet FortiGate firewall, establishing secure routing, segmentation, and controlled access across LAN, DMZ, and WAN (Internet) zones. The primary security posture enforces stateful inspection, permitting outbound traffic from the internal network while strictly allowing return traffic only for established, authorized sessions.
+Designed and deployed a comprehensive network architecture centered around a Fortinet FortiGate firewall, establishing secure routing, segmentation, and controlled access across LAN, DMZ, and WAN (Internet) zones. The primary security policy enforces stateful inspection, permitting outbound traffic from the internal network while strictly allowing return traffic only for established, authorized sessions.<br>
+
 🛠️ Key Implementation Steps
 <ul>
 <li>Perimeter Security & NAT: Configured WAN connectivity translating private internal IP addresses to public IPs using Port Address Translation (PAT).</li>
