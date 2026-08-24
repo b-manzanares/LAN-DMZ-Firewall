@@ -32,10 +32,10 @@
 
 ## Device Configurations
 
-Layer 3 switch (primary): [Layer 3 switch-1.txt](config/edge-router-1) — Handles primary internet outbound traffic. <br>
+Layer 3 switch (primary): [Layer 3 switch-1.txt] — Handles primary internet outbound traffic. <br>
 Layer 3 switch (secondary):[Layer 3 switch-2]
-Internal "Firewall": [Firewall.txt](config/firewall) — Manages NAT/PAT. <br>
-Service Provider Gateway A: [ISP-A-Router.txt](config/ISP-A) — Simulates primary upstream ISP peering. <br>
+Internal "Firewall": [Firewall.txt] — Manages NAT/PAT. <br>
+Service Provider Gateway A: [ISP-A-Router.txt] — Simulates primary upstream ISP peering. <br>
 
 
 ## ☑️Configuration & Verification Snippets
