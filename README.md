@@ -2,46 +2,45 @@
 
 ##Objective - The goal was to implement a firewall policy, static routing, and interface setup for a Fortinet firewall. This provided connectivity to a LAN, DMZ, and internet. Allowing connectivity from LAN to internet, and return only if a connection was established.
 
-
-* Configured eBGP and iBGP for dynamic routing & redundancy.
-* Manipulated path selection via local preference and AS-path prepending.
-* Built automatic fail-over mechanisms to maintain uptime during link or switch failures.
+* Set up a Fortinet firewall to connect to internet translating IP's from Private to Public via Port Address Translation (PAT).
+* Incorporated VLAN's for segmentation, secure shell for secure remote access, and Access-lists for security.   
+* Created DHCP for devices to receive IP addresses automatically.
 * Verified and tested network resilience and resource availability.
 
 ## 📖 Skills Learned
 
-* Advanced eBGP and iBGP configuration
-* Analyzing and interpreting verification commands
-* Manipulating path selection (Local Preference, AS-Path Prepending)
-* OSPF routing and `default-information originate always`
-* Multi-homed Dual WAN setups
-* Network troubleshooting
+* Fortinet polices & routing.
+* Hot standy redundancy protocol load balancing between VLANs.
+* Use of Wireshark for DCHP troubleshooting.
+* OSPF routing, for route updates when a link goes down. 
+* Single-home WAN setup.
+* Network troubleshooting.
 
 ## 🛠️ Tools & Technologies Used
 
 * Verification commands
-* Prefix lists and route maps
-* Bidirectional Forwarding Detection (BFD)
+* ACL's
+* Fortinet CLI for basic setup
 
 ## 🗺️ Topology Diagram
 
 [Below is the structural layout of the simulated enterprise edge environment, showcasing dual multihomed wan/isp setup]
 
-<img width="1920" height="913" alt="Screenshot 2026-08-21 at 15-51-24 BGP   HSRP CML²" src="https://github.com/user-attachments/assets/a646b0a1-e4d8-4217-b28e-bb9d4b73317c" />
+
 
 
 
 ## Device Configurations
 
-Enterprise Edge (Primary): [Edge-Router-01.txt](config/edge-router-1) — Handles primary internet outbound traffic. <br>
-Enterprise Edge (Secondary): [Edge-Router-02.txt](config/edge-router-2) — Acts as the secondary internet gateway. <br>
+Layer 3 switch (primary): [Layer 3 switch-1.txt](config/edge-router-1) — Handles primary internet outbound traffic. <br>
+Layer 3 switch (secondary):[Layer 3 switch-2]
 Internal "Firewall": [Firewall.txt](config/firewall) — Manages NAT/PAT. <br>
 Service Provider Gateway A: [ISP-A-Router.txt](config/ISP-A) — Simulates primary upstream ISP peering. <br>
-Service Provider Gateway B: [ISP-B-Router.txt](config/ISP-B) — Simulates secondary backup ISP peering. <br>
+
 
 ## ☑️Configuration & Verification Snippets
 
-### 1. Inbound Path Control via AS-Path Prepending
+### 1. Static Policies
 
 To prevent ISP-B from being used for inbound corporate traffic during normal operations, the secondary edge router prepends its Autonomous System (AS) number three times to advertisements sent to ISP-B. We might wish to alter how traffic arrives from the internet, since an ISP could charge more money or a stateful firewall could block packets on the return trip, because any connection that wasn't previously established is assumed to be malicious. 
 
@@ -75,7 +74,7 @@ inserthostname-here(config)#do sh bgp
 + *>   203.0.113.2/32       198.51.100.165                           0 64501 64500 64500 64500 64500 i
 ```
 
-### 2. Verification of BGP Neighbor States
+### 2. Routing
 
 Running show ip bgp summary confirms that peerings are properly established (State/PfxRcd shows a numerical value of prefixes received rather than an active state like Active or Idle).
 
