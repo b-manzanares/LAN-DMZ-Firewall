@@ -61,33 +61,15 @@ Service Provider Gateway A: [ISP-A-Router.txt] — Simulates primary upstream IS
 
 [Configuration]
 
-```text
-! Configuration on edge-router-02
 
-route-map AS_prepend permit 20
- set as-path prepend 64500 64500 64500
-!
-router bgp 64500
- neighbor 198.51.100.162 route-map route-map AS_prepend out
-```
 [Optional - Follow Description ] 
 
 ```text
-inserthostname-here(config)#do sh bgp
 
-     Network          Next Hop            Metric LocPrf Weight Path
- *>   203.0.113.1/32       203.0.113.249                           0 64502 64500 i
- *>   203.0.113.2/32       203.0.113.249                           0 64502 64500 i
 ```
 
-Now if we shutdown the link to ISP-A (AS-64502), our route to ISP-B (AS-64501) takes over and shows up in the path. We see the path includes AS-64501, the Autonomous system ISP-B belongs too. Here is the output: 
 
 ```diff
-inserthostname-here(config)#do sh bgp
-
-     Network          Next Hop            Metric LocPrf Weight Path
-+ *>   203.0.113.1/32       198.51.100.165                           0 64501 64500 64500 64500 64500 i
-+ *>   203.0.113.2/32       198.51.100.165                           0 64501 64500 64500 64500 64500 i
 ```
 
 ### 2. Routing
@@ -97,16 +79,9 @@ inserthostname-here(config)#do sh bgp
 [Config]
 
 
-### 1. NAT Translation Verification
-Verify that the Gateway Router is actively translating private IP traffic to public-ready flows, since private IP's can't be routed over the internet:
-```text
-Gateway Router(config)#do sh ip nat translations
-
-Pro Inside global      Inside local       Outside local      Outside global
-icmp 192.0.2.3:20032  192.168.10.1:20032 203.0.113.8:20032      203.0.113.8:20032
 
 ```
-### 3. BGP Path Attribute Verification
+### 3.  Verification
 
 [Description]
 [Configuration]
