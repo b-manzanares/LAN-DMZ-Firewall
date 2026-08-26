@@ -60,6 +60,8 @@ Service Provider Gateway A: [ISP-A-Router.txt] — Simulates primary upstream IS
 
 [Description]
 
+Policies were created on the Fortinet Firewall to allow connections to the Internet. Only IP's that were inside of VLAN10 and VLAN20 were allowed access to the Internet. NAT was enabled in order for the devices in the LAN to use the outbound interface pointing towards the internet. I also created a connection from LAN > DMZ to allow access to a web server and a DHCP server. 
+
 [Configuration]
 
 <img width="1920" height="903" alt="Fortigate Policy" src="https://github.com/user-attachments/assets/d4e0c7a1-f729-4c10-aaf1-9277e3dc76b9" />
