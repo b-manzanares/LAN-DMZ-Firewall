@@ -39,7 +39,8 @@ Designed and deployed a comprehensive network architecture centered around a For
 
 ## 🗺️ Topology Diagram
 
-[Below is the structural layout of the simulated enterprise edge environment, showcasing dual multihomed wan/isp setup]
+[Below is the structural layout of the simulated enterprise edge environment, showcasing a Fortinet Firewall connecting LAN > DMZ > Internet]
+<img width="1857" height="913" alt="topology" src="https://github.com/user-attachments/assets/193eed99-427c-4685-b25b-ae8193b82540" />
 
 
 
@@ -80,8 +81,12 @@ Service Provider Gateway A: [ISP-A-Router.txt] — Simulates primary upstream IS
 
 
 
-```
 ### 3.  Verification
 
 [Description]
 [Configuration]
+
+### 4. Implemented a Web filter
+I imposed a web filter on the LAN > WAN Firewall policy to block certain websites
+<img width="1005" height="752" alt="Block_Websites" src="https://github.com/user-attachments/assets/adf7e542-e94b-456d-a6f4-5e0cf1c1bf5a" />
+
