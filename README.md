@@ -1,3 +1,4 @@
+<img width="1920" height="903" alt="Fortigate Policy" src="https://github.com/user-attachments/assets/d4e0c7a1-f729-4c10-aaf1-9277e3dc76b9" />
 🛡️ LAN-DMZ-Firewall: Enterprise Network Implementation <br>
 
 🎯 Objective
