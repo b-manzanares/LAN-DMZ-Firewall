@@ -1,4 +1,3 @@
-<img width="1920" height="903" alt="Fortigate Policy" src="https://github.com/user-attachments/assets/d4e0c7a1-f729-4c10-aaf1-9277e3dc76b9" />
 🛡️ LAN-DMZ-Firewall: Enterprise Network Implementation <br>
 
 🎯 Objective
@@ -63,6 +62,7 @@ Service Provider Gateway A: [ISP-A-Router.txt] — Simulates primary upstream IS
 
 [Configuration]
 
+<img width="1920" height="903" alt="Fortigate Policy" src="https://github.com/user-attachments/assets/d4e0c7a1-f729-4c10-aaf1-9277e3dc76b9" />
 
 [Optional - Follow Description ] 
 
