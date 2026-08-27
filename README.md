@@ -40,8 +40,8 @@ Designed and deployed a comprehensive network architecture centered around a For
 ## 🗺️ Topology Diagram
 
 [Below is the structural layout of the simulated enterprise edge environment, showcasing a Fortinet Firewall connecting LAN > DMZ > Internet]
-<img width="1857" height="913" alt="topology" src="https://github.com/user-attachments/assets/193eed99-427c-4685-b25b-ae8193b82540" />
 
+<img width="1857" height="816" alt="topology" src="https://github.com/user-attachments/assets/4ce74319-2c33-44ce-aea1-2133ca7bf72b" />
 
 
 
