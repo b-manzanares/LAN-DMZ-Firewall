@@ -64,6 +64,11 @@ Policies were created on the Fortinet Firewall to allow connections to the Inter
 
 [Optional - Follow Description ] 
 
+Here is was the policy i added for the FTP server
+
+<img width="1912" height="786" alt="FTP_Server" src="https://github.com/user-attachments/assets/34154cc0-aeb2-41fd-9b14-011dafbd9145" />
+
+
 ```text
 
 ```
