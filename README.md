@@ -52,7 +52,7 @@ Service Provider Gateway A: [ISP-A-Router.txt] — Simulates primary upstream IS
 
 ## ☑️Configuration & Verification Snippets
 
-### 1. Static Policies
+### 1. Policies
 
 [Description]
 
@@ -68,7 +68,9 @@ I created a FTP server running on Linux in the DMZ. Here is the policy I created
 
 <img width="1912" height="786" alt="FTP_Server" src="https://github.com/user-attachments/assets/34154cc0-aeb2-41fd-9b14-011dafbd9145" />
 
+### 2. Web server
 
+Mapped a virtual IP to the web servers private ip so users could connect to a web server using public ip's. Then I allowed only HTTP and HTTPS traffic from the WAN to the DMZ.  
 ```text
 
 ```
