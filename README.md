@@ -52,7 +52,7 @@ Designed and deployed a comprehensive network architecture centered around a For
 
 ## ☑️Configuration & Verification Snippets
 
-### 1. Policies
+### 1. Policies & Objects
 
 [Description]
 
@@ -70,29 +70,12 @@ I created a FTP server running on Linux in the DMZ. Here is the policy I created
 
 ### 2. Web server
 
-Mapped a virtual IP to the web servers private ip so users could connect to a web server using public ip's. Then I allowed only HTTP and HTTPS traffic from the WAN to the DMZ.  
-```text
+Mapped a virtual IP to the web servers private IP so users could connect to a web server using public IP's. Then I allowed only HTTP and HTTPS traffic from the WAN to the DMZ, and LAN > DMZ using the internal IP addresses.
 
-```
-
-
-```diff
-```
-
-### 2. Routing
-
-[Description]
-
-[Config]
+<img width="1891" height="855" alt="Webserver" src="https://github.com/user-attachments/assets/48c6ad02-48c6-4509-a287-da2f73219a71" />
 
 
-
-### 3.  Verification
-
-[Description]
-[Configuration]
-
-### 4. Implemented a Web filter
+### 3. Implemented a Web filter
 I imposed a web filter on the LAN > WAN Firewall policy to block certain websites
 <img width="1005" height="752" alt="Block_Websites" src="https://github.com/user-attachments/assets/adf7e542-e94b-456d-a6f4-5e0cf1c1bf5a" />
 
