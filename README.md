@@ -43,9 +43,6 @@ Designed and deployed a comprehensive network architecture centered around a For
 
 <img width="1857" height="816" alt="topology" src="https://github.com/user-attachments/assets/4ce74319-2c33-44ce-aea1-2133ca7bf72b" />
 
-
-
-
 ## Device Configurations
 
 Layer 3 switch (primary): [Layer 3 switch-1.txt] — Handles primary internet outbound traffic. <br>
@@ -53,14 +50,13 @@ Layer 3 switch (secondary):[Layer 3 switch-2]
 Internal "Firewall": [Firewall.txt] — Manages NAT/PAT. <br>
 Service Provider Gateway A: [ISP-A-Router.txt] — Simulates primary upstream ISP peering. <br>
 
-
 ## ☑️Configuration & Verification Snippets
 
 ### 1. Static Policies
 
 [Description]
 
-Policies were created on the Fortinet Firewall to allow connections to the Internet. Only IP's that were inside of VLAN10 and VLAN20 were allowed access to the Internet. NAT was enabled in order for the devices in the LAN to use the outbound interface pointing towards the internet. I also created a connection from LAN > DMZ to allow access to a web server and a DHCP server. 
+Policies were created on the Fortinet Firewall to allow connections to the Internet, only from IP's that originated from VLAN10 and VLAN20. NAT was enabled in order for the devices in the LAN to use the outbound interface pointing towards the internet. I also created a connection from LAN > DMZ to allow access to a web server, ftp server, and DHCP server.
 
 [Configuration]
 
