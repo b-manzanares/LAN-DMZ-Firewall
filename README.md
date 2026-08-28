@@ -62,13 +62,13 @@ Policies were created on the Fortinet Firewall to allow connections to the Inter
 
 <img width="1920" height="903" alt="Fortigate Policy" src="https://github.com/user-attachments/assets/d4e0c7a1-f729-4c10-aaf1-9277e3dc76b9" />
 
-I created a FTP server running on Linux in the DMZ. Here is the policy I created for Core/Dist-SW1 to connect and download a file from the FTP server. 
+I created a FTP server running on Linux located in the DMZ. Here is the policy I created for Core/Dist-SW1 to connect and download a file from the FTP server. 
 
 <img width="1912" height="786" alt="FTP_Server" src="https://github.com/user-attachments/assets/34154cc0-aeb2-41fd-9b14-011dafbd9145" />
 
 ### 2. Web server
 
-Mapped a virtual IP to the web servers private IP so users could connect via the public IP's. Then I allowed only HTTP and HTTPS traffic from the WAN to the DMZ, and LAN > DMZ using the internal IP addresses.
+Mapped a virtual IP to the web servers private IP so users could connect via the public IP's. Then I allowed only HTTP and HTTPS traffic from the WAN > DMZ, and LAN > DMZ. Users within the LAN are able to connect to the DMZ with the internal IP address.
 
 <img width="1891" height="855" alt="Webserver" src="https://github.com/user-attachments/assets/48c6ad02-48c6-4509-a287-da2f73219a71" />
 
