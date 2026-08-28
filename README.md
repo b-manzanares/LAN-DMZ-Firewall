@@ -68,8 +68,7 @@ I created an FTP server on Ubuntu, located in the DMZ. The following image shows
 
 Mapped a virtual IP to the web servers private IP so users could connect via the public IP's. Then I allowed only HTTP and HTTPS traffic from the WAN > DMZ, and LAN > DMZ. Users within the LAN are able to connect to the DMZ with the internal IP address.
 
-<img width="1891" height="855" alt="Webserver" src="https://github.com/user-attachments/assets/48c6ad02-48c6-4509-a287-da2f73219a71" />
-
+<img width="1863" height="738" alt="Web_server_in" src="https://github.com/user-attachments/assets/3856aaa0-449b-4d9b-a48a-8c9122bd3840" />
 
 ### 3. Implemented a Web filter
 I imposed a web filter on the LAN > WAN Firewall policy to block certain websites. Here in particular I blocked users from accessing youtube.com.
