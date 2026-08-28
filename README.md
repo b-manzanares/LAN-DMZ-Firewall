@@ -58,11 +58,9 @@ Designed and deployed a comprehensive network architecture centered around a For
 
 Policies were created on the Fortinet Firewall to allow connections to the Internet, only from IP's that originated from VLAN10 and VLAN20. NAT was enabled in order for the devices in the LAN to use the outbound interface pointing towards the internet. I also created a connection from LAN > DMZ to allow access to a web server, ftp server, and DHCP server.
 
-[Configuration]
-
 <img width="1920" height="903" alt="Fortigate Policy" src="https://github.com/user-attachments/assets/d4e0c7a1-f729-4c10-aaf1-9277e3dc76b9" />
 
-I created a FTP server running on Linux located in the DMZ. Here is the policy I created for Core/Dist-SW1 to connect and download a file from the FTP server. 
+I created an FTP server on Ubuntu, located in the DMZ. The following image shows the the policy I created for Core/Dist-SW1, to connect and download a file from the FTP server. 
 
 <img width="1912" height="786" alt="FTP_Server" src="https://github.com/user-attachments/assets/34154cc0-aeb2-41fd-9b14-011dafbd9145" />
 
@@ -74,6 +72,7 @@ Mapped a virtual IP to the web servers private IP so users could connect via the
 
 
 ### 3. Implemented a Web filter
-I imposed a web filter on the LAN > WAN Firewall policy to block certain websites
+I imposed a web filter on the LAN > WAN Firewall policy to block certain websites. Here in particular I blocked users from accessing youtube.com.
+
 <img width="1005" height="752" alt="Block_Websites" src="https://github.com/user-attachments/assets/adf7e542-e94b-456d-a6f4-5e0cf1c1bf5a" />
 
